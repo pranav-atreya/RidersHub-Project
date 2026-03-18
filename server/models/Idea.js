@@ -1,0 +1,21 @@
+const mongoose = require('mongoose');
+
+const IdeaSchema = new mongoose.Schema(
+  {
+    text: {
+      type: String,
+      required: true,
+    },
+    username: {
+      type: String,
+      required: true,
+    },
+    userId: {
+      type: String,
+      required: true,
+    },
+  },
+  { timestamps: true } 
+);
+
+module.exports = mongoose.model('Idea', IdeaSchema);
